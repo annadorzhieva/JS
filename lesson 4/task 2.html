@@ -1,0 +1,34 @@
+/*2.Продолжить работу с интернет-магазином:
+2.1. В прошлом домашнем задании вы реализовали корзину на базе массивов. Какими объектами можно заменить их элементы?
+2.2. Реализуйте такие объекты.
+2.3. Перенести функционал подсчета корзины на объектно-ориентированную базу.*/
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 2</title>
+</head>
+<body>
+<script>
+function Basket(product, price, quantity, discount=0) {
+    this.product = product;
+    this.price = price;
+    this.quantity = quantity;
+    this.discount = discount;
+    this.finalPrice = function() {
+        if (this.discount != 0) {
+            return this.price - this.price*this.discount/100;
+        } else {
+            return this.price;
+        }
+    }
+    this.showMyProd = function() {
+        return `${this.product} (количество: ${this.quantity})`;
+    }
+}
+
+// с выводом не получается
+
+</script>
+</body>
+</html>

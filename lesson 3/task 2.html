@@ -1,0 +1,39 @@
+/* Предположим, есть сущность корзины.
+Нужно реализовать функционал подсчета стоимости корзины в зависимости от находящихся в ней товаров.*/
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 2</title>
+</head>
+<body>
+<script>
+     let basket = [
+            {
+                product: "apple",
+                price: getNumber(50, 70)
+            },
+            {
+                product: "banana",
+                price: getNumber(50, 80)
+            },
+            {
+                product: "brad",
+                price: getNumber(50, 20)
+            },
+            {
+                product: "juise",
+                price: getNumber(50, 75)
+            }
+        ];
+        let basketPrice = 0;
+        for (let prod of basket){
+            basketPrice += prod.price;
+            console.log("Товар " + prod.product + " стоит: " + prod.price);
+        }
+
+        console.log("Стоимость корзины: " + basketPrice + "rub.");
+</script>
+</body>
+</html>
